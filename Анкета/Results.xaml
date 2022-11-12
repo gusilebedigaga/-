@@ -1,0 +1,33 @@
+﻿<Window x:Class="Анкета.Results"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Анкета"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Анкета" Height="600" Width="825" ResizeMode="NoResize">
+    <Grid Background="#ffdadada">
+        <Border MinWidth="350" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="750" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="10">
+
+                </DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <Grid>
+
+                    <TextBlock HorizontalAlignment="Left" Text="Результаты анкеты" FontSize ="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                    <Button HorizontalAlignment="Right" Content="Вернуться на страницу с анкетой" Style="{StaticResource MaterialDesignFlatButton}" Cursor="Hand" Click="Button_Click"/>
+                </Grid>
+
+                <ListView x:Name="listOfUsers" Margin="10" Height="350" Width="660" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+                <Grid>
+
+                    <Button HorizontalAlignment="Left" Content="Построить графики на основе результатов" Style="{StaticResource MaterialDesignFlatButton}" Cursor="Hand" Click="Button_Click_1"/>
+                    <Button HorizontalAlignment="Right" Content="Удаленние результатов" Style="{StaticResource MaterialDesignFlatButton}" Cursor="Hand" Click="Button_Click_2"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
